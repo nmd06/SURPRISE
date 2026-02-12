@@ -1,0 +1,184 @@
+/* Reset & Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(-45deg, #ff758c, #ff7eb3, #fad0c4, #fbc2eb);
+  background-size: 400% 400%;
+  animation: gradientMove 12s ease infinite;
+  overflow: hidden;
+  perspective: 1000px;
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Card */
+.card {
+  width: 400px;
+  padding: 40px;
+  border-radius: 30px;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(20px);
+  text-align: center;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+  animation: fadeUp 1s ease;
+  position: relative;
+  transform-style: preserve-3d;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Emoji */
+.emoji {
+  font-size: 70px;
+  animation: heartbeat 1.5s infinite;
+}
+
+@keyframes heartbeat {
+  0%,100% { transform: scale(1); }
+  50% { transform: scale(1.15); }
+}
+
+h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 28px;
+  margin: 20px 0 30px;
+  color: #fff;
+  text-shadow: 0 0 6px #fff;
+}
+
+/* Buttons */
+.buttons {
+  position: relative;
+  height: 70px;
+}
+
+button {
+  position: absolute;
+  padding: 14px 36px;
+  border-radius: 40px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.3s ease;
+}
+
+#yes {
+  left: 10%;
+  background: linear-gradient(135deg, #ff4d6d, #ff758f);
+  color: white;
+  box-shadow: 0 10px 25px rgba(255,77,109,0.5);
+}
+
+#yes:hover {
+  transform: scale(1.1);
+}
+
+#no {
+  left: 55%;
+  background: white;
+  color: #777;
+}
+
+/* Hint */
+.hint {
+  margin-top: 25px;
+  font-size: 13px;
+  color: #fff;
+  opacity: 0.8;
+}
+
+/* Surprise Section */
+.surprise {
+  position: absolute;
+  text-align: center;
+  color: white;
+  animation: fadeIn 1s ease forwards;
+}
+
+.hidden {
+  display: none;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+/* Witty Comment */
+.wittyComment {
+  font-family: "Playfair Display", serif;
+  font-size: 32px;
+  color: #fff;
+  margin-bottom: 20px;
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: all 0.6s ease;
+  text-shadow: 0 0 8px #fff, 0 0 15px #ff4d6d;
+  white-space: pre-wrap;
+}
+
+/* Fade-in helper */
+.fade-in {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+  transition: all 0.8s ease;
+}
+
+.hidden-element {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+/* Love Photo */
+.lovePhoto {
+  width: 260px;
+  border-radius: 20px;
+  margin: 20px 0;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+  animation: floatPhoto 4s ease-in-out infinite;
+}
+
+@keyframes floatPhoto {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+/* Love Message */
+.loveMessage {
+  max-width: 500px;
+  margin: auto;
+  font-size: 18px;
+  line-height: 1.6;
+  opacity: 0;
+}
+
+/* Floating hearts */
+.heart {
+  position: absolute;
+  bottom: -20px;
+  animation: floatUp linear forwards;
+  pointer-events: none;
+}
+
+@keyframes floatUp {
+  to {
+    transform: translateY(-110vh);
+    opacity: 0;
+  }
+}

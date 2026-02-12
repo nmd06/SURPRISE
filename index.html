@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Be My Valentine 💘</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <!-- Confetti -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Background Hearts -->
+  <div class="hearts-container"></div>
+
+  <!-- MAIN CARD -->
+  <div class="card" id="mainCard">
+    <div class="emoji">💖</div>
+    <h2>Mommy,<br>Will you be my Valentine and pwede pasilip?</h2>
+
+    <div class="buttons">
+      <button id="yes">Yes 💕</button>
+      <button id="no">No 🙈</button>
+    </div>
+
+    <p class="hint">“Yes is mandatory, but I’ll let you pretend you had a choice.”</p>
+  </div>
+
+  <!-- SURPRISE SECTION -->
+  <div class="surprise hidden" id="surprise">
+    <h1 class="wittyComment" id="wittyComment"></h1>
+
+    <img src="your-photo.jpeg" alt="Our Photo" class="lovePhoto">
+
+    <p class="loveMessage">
+      From the moment you walked into my life,<br>
+      everything became brighter.<br><br>
+      You are my happiness, my peace,<br>
+      and the most beautiful chapter of my story.<br><br>
+      I can't wait to create forever with you. 💖
+    </p>
+  </div>
+
+  <!-- Optional Romantic Music -->
+  <audio id="bgMusic" src="Tahanan.mp3"></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
